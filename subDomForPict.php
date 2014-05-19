@@ -34,7 +34,7 @@ class subDomForPict extends plxPlugin {
 	 * @author	Cyril MAGUIRE
 	 **/
 	public function IndexEnd() {
-		if (!empty($this->getParam('subdom'))) {
+		if ($this->getParam('subdom')!="") {
 			$string = '$output = str_replace(array(plxUtils::getRacine().\'data/images/\',\'data/images/\'), \''.$this->getParam('subdom').'\', $output);
 			';
 			echo "<?php ".$string."?>";
